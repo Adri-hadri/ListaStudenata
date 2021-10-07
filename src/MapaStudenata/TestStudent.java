@@ -1,9 +1,12 @@
 package MapaStudenata;
 
+import ListaStudenata.Student;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Map;
 
 public class TestStudent {
 
@@ -19,22 +22,18 @@ public class TestStudent {
         mapaStudenata.put(111, marko);
         mapaStudenata.put(222, marko);
 
-        System.out.println((mapaStudenata.keySet());
-        System.out.println((mapaStudenata.values());
+        System.out.println((mapaStudenata.keySet()));
+        System.out.println((mapaStudenata.values()));
 
         for (Integer key : mapaStudenata.keySet()) {
             System.out.println(key);
         }
 
-        for (Integer key : mapaStudenata.values()) {
-            System.out.println(s.getFirst_name);
+        for (Student values : mapaStudenata.values()) {
+            System.out.println(values.getFirst_name());
         }
 
-        for (Integer key : mapaStudenata.values()) {
-            System.out.println(s.getFirst_name);
-        }
-
-        boolean izlaz = false;
+       boolean izlaz = false;
 
         while (!izlaz) {
             System.out.println(" *** Lista ***");
@@ -50,7 +49,7 @@ public class TestStudent {
 
             if (i.equals("a")) {
                 student = addNewStudent();
-                mapaStudenata.put(student.getIdNumber(),student);
+                mapaStudenata.put(student.getIdNumber(), student);
 
             } else if (i.equals("b")) {
                 System.out.println("Ključ studenta:");
@@ -65,29 +64,25 @@ public class TestStudent {
                 System.out.println("Ključ studenta:");
                 int key = s.nextInt();
                 mapaStudenata.remove(key);
-
-
-                for (Student s : mapaStudenata) {
-                    if (s.getIdNumber() == id) {
-
-                    }
-                }
-            }
-
-            else if (i.equals("d")) {
+            } else if (i.equals("d")) {
                 System.out.println("Unesite ključ studenta:");
                 int key = s.nextInt();
 
                 for (Integer k : mapaStudenata.keySet()) {
                     if (k == key) {
-                        mapaStudenata.get(k); {
-                            mapaStudenata.get(k).increaseYear();
+                        mapaStudenata.get(k);
+                        {
+                            mapaStudenata.get(k).IncreaseYear();
                         }
                     }
                 }
+            } else if (i.equals("e")) {
+                System.out.println(mapaStudenata);
+
+            } else if (i.equals("f")) {
+                izlaz = true;
             }
         }
-
     }
 
     public static Student addNewStudent() {
