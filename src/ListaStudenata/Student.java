@@ -32,6 +32,19 @@ public class Student {
         this.idNumber = idNumber;
     }
 
+    public void IncreaseYear() {
+        year++;
+    }
+
+    @Override
+    public String toString() {
+        return "Student: {" +
+                "idNumber= " + idNumber +
+                ", first_name= '" + first_name + '\'' +
+                ", year= " + year +
+                '}' + "\n";
+    }
+
     public void setFirst_name(String first_name) {
         this.first_name = first_name;
     }

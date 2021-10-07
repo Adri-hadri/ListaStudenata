@@ -33,6 +33,7 @@ public class TestStudent {
             if (i.equals("a")) {
                 student = addNewStudent();
                 listaStudenata.add(student);
+
             } else if (i.equals("b")) {
                 System.out.println("Id studenta:");
                 int id = s.nextInt();
@@ -49,19 +50,20 @@ public class TestStudent {
                         listaStudenata.remove(s);
                     }
                 }
-            }
-            //nije gotovo
-            else if (i.equals("d")) {
+            } else if (i.equals("d")) {
                 System.out.println("Id studenta:");
                 int id = s.nextInt();
                 for (Student s : listaStudenata) {
                     if (s.getIdNumber() == id) {
-                        listaStudenata.add(s);
+                        s.IncreaseYear();
                     }
                 }
+            } else if (i.equals("e")) {
+                System.out.println(listaStudenata);
+            } else if (i.equals("f")) {
+                izlaz = true;
             }
         }
-
     }
 
     public static Student addNewStudent() {
@@ -81,5 +83,3 @@ public class TestStudent {
         return newStudent;
     }
 }
-
-
